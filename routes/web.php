@@ -14,3 +14,12 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+$router->group(["prefix" => "api/v1"], function () use ($router) {
+    // Customer
+    $router->get("customer", "CustomerController@get");
+    $router->post("customer", "CustomerController@create");
+    $router->get("customer/{id}", "CustomerController@getById");
+    $router->delete("customer/{id}", "CustomerController@delete");
+    $router->patch("customer/{id}", "CustomerController@patch");
+});
