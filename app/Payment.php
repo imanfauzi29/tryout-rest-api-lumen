@@ -27,8 +27,8 @@ class Payment extends Model
     //     'password',
     // ];
 
-    public function post()
+    public function order()
     {
-        // return $this->hasMany('App\Post');
+        return $this->belongsTo('App\Order');
     }
 }

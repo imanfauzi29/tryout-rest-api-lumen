@@ -27,8 +27,13 @@ class Order extends Model
     //     'password',
     // ];
 
-    public function post()
+    public function customer()
     {
-        // return $this->hasMany('App\Post');
+        return $this->belongsTo('App\Customer');
+    }
+
+    public function orderItem()
+    {
+        return $this->hasOne("App\OrderItem");
     }
 }

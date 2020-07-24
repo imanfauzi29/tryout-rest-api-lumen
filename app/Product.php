@@ -6,7 +6,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Author extends Model
+class Product extends Model
 {
 
     /**
@@ -27,8 +27,8 @@ class Author extends Model
     //     'password',
     // ];
 
-    public function post()
+    public function orderItem()
     {
-        // return $this->hasMany('App\Post');
+        return $this->hasMany('App\orderItem');
     }
 }

@@ -27,8 +27,8 @@ class Customer extends Model
     //     'password',
     // ];
 
-    public function post()
+    public function order()
     {
-        return $this->hasMany('App\Order');
+        return $this->hasOne('App\Order');
     }
 }
