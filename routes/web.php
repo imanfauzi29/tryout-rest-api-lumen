@@ -43,4 +43,5 @@ $router->group(["prefix" => "api/v1"], function () use ($router) {
     $router->get("payment/{id}", "PaymentController@getById");
     $router->delete("payment/{id}", "PaymentController@delete");
     $router->put("payment/{id}", "PaymentController@update");
+    $router->put("payment/midtrans/push", "PaymentController@receive");
 });
